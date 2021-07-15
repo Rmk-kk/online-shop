@@ -1,0 +1,35 @@
+.add_to_card {
+    &_button {
+        z-index: 2;
+
+
+        padding:11px 13px;
+        color:rgb(151, 151, 151);
+        font-size:14px;
+        line-height: 1.2;
+        border: 1px solid rgb(151, 151, 151);
+        background: transparent;
+        opacity: 0;
+        transition: all .2s linear;
+        cursor: pointer;
+    
+        display: flex;
+        align-items: center;
+        
+        &:hover {
+            color:white;
+            border: 1px solid white;
+            transform: scale(1.2);
+            & svg {
+                fill:white;
+            }
+        }
+    }
+
+}
+
+.add_to_cart_img {
+    margin-right: 11px;
+    fill:rgb(151, 151, 151);
+    transition: fill .2s linear;
+}

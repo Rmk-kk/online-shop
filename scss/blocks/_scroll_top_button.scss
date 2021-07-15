@@ -1,0 +1,19 @@
+.scroll__top__btn {
+    position: fixed;
+    z-index: 1000;
+    bottom: 50px;
+    right: 50px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+
+    transition: all .2s linear;
+} 
+
+@media (max-width:375px) {
+    .scroll__top__btn {
+        bottom: 25px;
+        right: 15px;
+        transform: scale(0.7);
+    }
+}

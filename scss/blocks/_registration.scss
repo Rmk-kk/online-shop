@@ -1,0 +1,115 @@
+.regist {
+    padding-top: 65px;
+    padding-bottom: 96px;
+    display: flex;
+    justify-content: space-between;
+
+    &__form {
+        max-width: 360px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        &__title {
+            margin-bottom: 20px;
+            @include font(16px, 19px, #222, 300);
+
+        }
+        &__radio {
+            display: flex;
+            align-items: center;
+            margin-top: 20px;
+            margin-bottom: 33px;
+
+            & input {
+                margin-right: 10px;
+            }
+
+            & label {
+                margin-right: 20px;
+                @include font(13px, 16px, #000, 300)
+            }
+        }
+
+        & p {
+            @include font(13px, 16px, #b1b1b1, 300);
+            margin-bottom: 40px;
+        }
+
+        &__button {
+            padding: 17px 29px;
+            border: none;
+            background-color: #F16D7F;
+            text-transform: uppercase;
+            @include font(14px, 17px, #fff, 400);
+            cursor: pointer;
+
+            transition: all .2s linear;
+            & svg {
+                fill:white;
+                margin-left: 15px;  
+            }
+            &:hover {
+                outline: 1px solid rgb(151, 151, 151);
+                background-color: #fff;
+                color:#222;
+
+                & svg {
+                    fill:#222;
+                }
+            }
+        }
+    }
+    
+    &__content {
+        max-width: 650px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+
+        & h3 {
+            @include font(24px, 29px, #000, 300);
+            text-transform: capitalize;
+            margin-bottom: 22px;
+        }
+
+        & p {
+            @include font(24px, 29px, #000, 300);
+        }
+        
+        & ul {
+            @include font(24px, 29px, #000, 300);
+            & li {
+                display: flex;
+                margin-bottom: 15px;
+                &:before {
+                    content:url(img/icons/benefit.svg);
+                    display: block;
+                    margin-right: 23px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .regist {
+        &__content {
+
+            margin-left: 22px;
+            & h3, p , ul {
+                @include font(16px, 19px, #000, 300);
+            }
+
+            & h3 {
+                margin-bottom: 32px;
+            }
+
+            & p {
+                margin-bottom: 17px;
+            }
+        }
+    }
+}

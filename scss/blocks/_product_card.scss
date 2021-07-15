@@ -1,0 +1,111 @@
+.product__card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    margin-top: -50px;
+    padding:65px 0;
+    margin-bottom: 68px;
+
+    border: 1px solid #EAEAEA;
+    background-color: #fff;
+
+    position: relative;
+    &__title {
+        margin-bottom: 27px;
+        @include font(14px, 17px, #F16D7F, 300);
+        text-transform: uppercase;
+
+        &:after {
+            content: "";
+            display: block;
+            background-color: #EF5B70;
+            width: 63px;
+            height: 3px;
+            margin: 0 auto;
+            margin-top: 12px;
+        }
+    }
+
+    &__name {
+        margin-bottom: 50px;
+        @include font(18px, 22px, #4D4D4D, 300)
+    }
+
+    &__text {
+        margin-bottom: 32px;
+        max-width: 555px;
+        width: 100%;
+        text-align: center;
+        @include font(14px, 17px, #5E5E5E, 300)
+    }
+    &__price {
+        margin-bottom: 64px;
+        @include font(24px, 29px, #EF5B70, 300);
+    }
+
+    &__border {
+        max-width: 642px;
+        width: 100%;
+        height: 1px;
+        background-color: #EAEAEA;
+        margin-bottom: 64px;
+    }
+
+    &__nav {
+        display: flex;
+
+    }
+
+    &__button {
+        border: 1px solid #EF5B70;
+        opacity: 1;
+        color:#EF5B70;
+        margin-top: 50px;
+
+        &:hover {
+            border:1px solid #FF6A6A;
+            color:#EF5B70;
+            transform: scale(1.2);
+
+            & svg {
+                fill:#EF5B70;
+            }
+        }
+
+        & svg {
+            fill: #EF5B70;
+        }
+    }
+}
+
+@media (max-width: 375px) {
+    .filter_other_title {
+        font-size: 10px;
+    }
+    .product {
+        &__card__nav{
+            justify-content: space-between;
+        }
+
+        &__card__price {
+            margin-bottom: 31px ;
+        }
+
+        &__card__border {
+            max-width: 174px;
+            width: 100%;
+            background-color:#EAEAEA;
+            margin-bottom: 48px;
+        }
+    }
+
+    .filter_img {
+        margin-right: 24px;
+
+        &_last {
+            margin-right: 0;
+        }
+    }
+}

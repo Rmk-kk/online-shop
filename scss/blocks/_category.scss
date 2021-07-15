@@ -1,0 +1,126 @@
+.category{
+    margin-bottom: 96px;
+
+    &_wrap {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    &_item {
+        position: relative;
+        background-color: #F16D7F;
+
+        &:not(:last-child) {    
+            width: 360px;
+            height: 260px;
+            margin-bottom: 30px;
+        }
+
+        &_picture {
+            display: block;
+            transition: opacity .2s linear;
+
+            &_wrap {
+                background: rgb(6,6,8);
+                background: linear-gradient(0deg, rgba(6,6,8,1) 38%, rgba(241,109,127,0.9304096638655462) 100%);   
+                transition: transform .2s linear;
+            }
+        }
+
+        &:hover {
+            & .category_item_picture_wrap {
+                transform: translate3d(-10px, -10px, 0);
+            } 
+            & .category_item_picture {
+                opacity: 0.3;
+            }
+
+            & .category_text {
+                opacity: 1;
+            }
+        }
+
+    }
+
+    &_text {
+        width: 100%;
+        position: absolute;
+        top:50%;
+        left:0;
+        text-align: center;
+        transform: translate3d(0 , -50%, 0) translate3d(-10px, -10px, 0);
+
+        opacity: 0;
+        transition: opacity .2s linear;
+
+        @include font(16px, 19px, #fff, 400);
+        & svg {
+            margin-top: 5px;
+        }
+        &_header {
+            @include font(24px, 29px, #F16D7F, 700);
+            text-transform: uppercase;
+        }
+    }
+}
+
+@media ( max-width: 1024px) {
+    .category {
+        margin-bottom: 150px;
+
+        &_item {
+
+            &_picture {
+                width: 100%;
+                height: 100%;
+
+                &_long {
+                    width: 100%;
+                    height: 116px;
+                }
+            }
+
+            &:not(:last-child) {    
+                width: 232px;
+                height: 167px;
+                margin-bottom: 20px;
+            }
+
+            &:last-child {
+                width: 100%;
+                height: 116px;
+            }
+        }
+    }
+}
+
+@media ( max-width: 375px) {
+    .category {
+        margin-bottom: 64px;
+
+        &_item {
+
+            &_picture {
+                width: 100%;
+                height: 100%;
+                
+                &_long {
+                    width: 100%;
+                    height: 111px;
+                }
+            }
+
+            &:not(:last-child) {    
+                width: 344px;
+                height: 248px;
+                margin-bottom: 32px;
+            }
+
+            &:last-child {
+                width: 100%;
+                height: 111px;
+            }
+        }
+    }
+}
