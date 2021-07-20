@@ -1,7 +1,7 @@
 .header {
     padding: 18px 0;
     background-color: #222222;
-    
+    position: relative;
     &_wrap {
         display: flex;
         justify-content: space-between;
@@ -18,7 +18,7 @@
             margin-right: 21px;
         }
 
-        &:last-child {    
+        &:last-child {
             position: relative;
         }
     }
@@ -30,27 +30,41 @@
         &:hover{
             fill:#F16D7F;
         }
+    }
 
-        &_burger {
-            transition: all .2s linear;
-            
-            &:hover {
-                transform: rotate(90deg);
-            }
+    &_left {
+        display: flex;
+        align-items:center;
+    }
+
+    &_right {
+        display: flex;
+        align-items: center;
+
+        & input {
+            background: url(/app/img/header/burger.svg);
+            width: 40px;
+            height: 40px;
+            opacity: 1;
         }
+
+    }
+
+    & #burger_menu_button:checked + .burger__list {
+        opacity: 1;
     }
 }
+
 
 .cart__round {
     position: absolute;
     left:22px;
     bottom:22px;
-    
 
     &__number {
         position: absolute;
         text-decoration: none;
-        top:-20px;
+        top: -6px;
         right:-4px;
         @include font(12px, 14px, #fff, 400);
     }
@@ -59,9 +73,10 @@
 @media ( max-width: 1024px) {
     .header {
         padding-left:16px;
-        padding-right: 16px;
     }
 }
+
+
 
 @media (max-width: 375px) {
     .header {

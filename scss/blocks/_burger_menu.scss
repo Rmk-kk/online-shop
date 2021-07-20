@@ -1,0 +1,235 @@
+
+.burger {
+    margin-right: 25px;
+
+    &__list {
+        background-color: white;
+        padding:16px 17px 157px 35px;
+        position: absolute;
+        right:0;
+        top:100%;
+        box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
+        transition: transform .2s linear;
+        z-index: 10000;
+        transform: scaleX(0);
+        display: flex;
+        flex-direction: column;
+        &__cross {
+            fill: #6F6E6E;
+            cursor: pointer;    
+        }
+    
+        & h4 {
+            @include font(14px, 1.2, #000, 700);
+            text-transform: uppercase;
+            margin-bottom: 24px;
+        }
+    
+        & ul {
+            @include font(14px, 1.2, #F16D7F, 400);
+            text-transform: uppercase;    
+    
+            &:not(:last-child) {
+                margin-bottom: 20px;
+            }
+    
+            & li {
+                
+                margin-top: 12px;
+                margin-left: 22px;
+                text-transform: capitalize;
+                cursor: pointer;
+                padding-right: 60px;
+            }
+    
+            & a {
+                text-decoration: none;
+                @include font(14px, 1.2, #6F6E6E, 400);
+                transition: all .2s linear;
+                text-decoration: none;
+                
+                &:hover {
+                    @include font(14px, 1.2, #F16D7F, 400);
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
+    &__opened {
+        transform: scaleX(1);
+      }
+}
+
+.btn-burger {
+    background: none;
+    padding:0;
+    cursor: pointer;
+    border: none;
+
+    &__close {
+        background: none;
+        cursor: pointer;
+        border: none;
+        padding:0;
+        margin-bottom: 5px;
+        transition: all .2s linear;
+        fill:#6F6E6E;
+        align-self: end;
+
+        &:hover {
+            transform: scale(1.1);
+            fill:#F16D7F;
+        }
+    }
+}
+
+@media (max-width:1024px) {
+    .burger__list {
+        padding:16px 17px 45px 25px;
+        right:5px;
+
+        & h4 {
+            @include font(12px, 1.2, #000, 700);
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+
+        & ul {
+            @include font(12px, 1.2, #F16D7F, 400);
+            text-transform: uppercase;    
+
+            &:not(:last-child) {
+                margin-bottom: 15px;
+            }
+
+            & li {
+                margin-top: 10px;
+                margin-left: 16px;
+                text-transform: capitalize;
+                cursor: pointer;
+                padding-right: 30px;
+                
+            }
+
+            & a {
+                text-decoration: none;
+                @include font(14px, 1.2, #6F6E6E, 400);
+                transition: all .2s linear;
+                text-decoration: none;
+                &:hover {
+                    @include font(14px, 1.2, #F16D7F, 400);
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:768px) {
+
+    .burger__list {
+        padding:16px 17px 45px 25px;
+        right:5px;
+
+        & h4 {
+            @include font(12px, 1.2, #000, 700);
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+
+        & ul {
+            @include font(12px, 1.2, #F16D7F, 400);
+            text-transform: uppercase;    
+
+            &:not(:last-child) {
+                margin-bottom: 15px;
+            }
+
+            & li {
+                margin-top: 10px;
+                margin-left: 16px;
+                text-transform: capitalize;
+                cursor: pointer;
+                padding-right: 30px;
+                
+            }
+
+            & a {
+                text-decoration: none;
+                @include font(14px, 1.2, #6F6E6E, 400);
+                transition: all .2s linear;
+                text-decoration: none;
+                &:hover {
+                    @include font(14px, 1.2, #F16D7F, 400);
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
+}
+
+@media (min-width: 600px) and (max-width:667px) {
+    .burger__list {
+        display: flex;
+        flex-direction: column;
+        padding:16px 17px 45px 20px;
+
+        & ul {
+            margin-left: 60px;
+            position: relative;
+
+            & li {
+                padding-right: 30px;
+            }
+        }
+        
+
+        
+    }
+}
+
+@media (max-width:375px) {
+
+    .burger__list {
+        padding:16px 17px 45px 20px;
+        right:5px;
+
+        & h4 {
+            @include font(12px, 1.2, #000, 700);
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+
+        & ul {
+            @include font(12px, 1.2, #F16D7F, 400);
+            text-transform: uppercase;    
+
+            &:not(:last-child) {
+                margin-bottom: 15px;
+            }
+
+            & li {
+                margin-top: 10px;
+                margin-left: 16px;
+                text-transform: capitalize;
+                cursor: pointer;
+                padding-left: 30px;
+                
+            }
+
+            & a {
+                text-decoration: none;
+                @include font(14px, 1.2, #6F6E6E, 400);
+                transition: all .2s linear;
+                text-decoration: none;
+                &:hover {
+                    @include font(14px, 1.2, #F16D7F, 400);
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
+}

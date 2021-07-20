@@ -97,8 +97,8 @@
 @media (max-width: 1024px) {
     .regist {
         &__content {
-
             margin-left: 22px;
+            
             & h3, p , ul {
                 @include font(16px, 19px, #000, 300);
             }
@@ -109,6 +109,24 @@
 
             & p {
                 margin-bottom: 17px;
+            }
+        }
+    }
+}
+
+@media (max-width: 375px) {
+    .regist {
+        flex-direction: column;
+
+        &__form {
+            margin-bottom: 30px;
+        }
+
+        &__content {
+            margin-left: 0;
+
+            & h3 {
+                font-size: 20px;
             }
         }
     }
